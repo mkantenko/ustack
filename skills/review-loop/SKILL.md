@@ -13,7 +13,7 @@ Use the models the user names. Otherwise use all three:
 
 | Lane | target |
 |---|---|
-| Codex | `{"providerInstanceId":"codex","model":"gpt-6.1-sol","options":{"reasoningEffort":"max"}}` |
+| Codex | `{"providerInstanceId":"codex","model":"gpt-6.1-sol","options":{"reasoningEffort":"xhigh"}}` |
 | GLM | `{"providerInstanceId":"opencode","model":"opencode-go/glm-5.3-flash","options":{"variant":"max"}}` |
 | DeepSeek | `{"providerInstanceId":"opencode","model":"opencode-go/deepseek-v4.1-flash","options":{"variant":"max"}}` |
 
