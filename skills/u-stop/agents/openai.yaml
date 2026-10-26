@@ -1,0 +1,4 @@
+interface:
+  display_name: "U-stop"
+  short_description: "Do it, review-loop, file the PR, stop"
+  default_prompt: "Use $u-stop to do this work, run review-loop, file the PR, and stop."
