@@ -9,7 +9,7 @@ Each round, a panel of T3 delegate reviewers runs in parallel against the pushed
 
 ## Panel
 
-Use the models the user names. Otherwise use all three:
+Do not use Opus in this workflow; it belongs to `council`. Use the other models the user names. Otherwise use all three:
 
 | Lane | target |
 |---|---|
