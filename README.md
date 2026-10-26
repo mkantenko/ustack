@@ -2,8 +2,6 @@
 
 My agent skills for Claude Code and Codex. Shaped after [tstack](https://github.com/t3dotgg/tstack), built for my workflow.
 
-U is the album, after its song "Do it": do it and stop, do it and merge.
-
 ## Skills
 
 | Skill | Say | What it does |
