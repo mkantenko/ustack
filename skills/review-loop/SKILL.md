@@ -9,13 +9,12 @@ Each round, a panel of T3 delegate reviewers runs in parallel against the pushed
 
 ## Panel
 
-Do not use Opus in this workflow; it belongs to `council`. Use the other models the user names. Otherwise use all three:
+Do not use Opus in this workflow; it belongs to `council`. Use the other models the user names. Otherwise use both:
 
 | Lane | target |
 |---|---|
 | Codex | `{"providerInstanceId":"codex","model":"gpt-6.1-sol","options":{"reasoningEffort":"xhigh"}}` |
 | GLM | `{"providerInstanceId":"opencode","model":"opencode-go/glm-5.3-flash","options":{"variant":"max"}}` |
-| DeepSeek | `{"providerInstanceId":"opencode","model":"opencode-go/deepseek-v4.1-flash","options":{"variant":"max"}}` |
 
 Call `orchestrator_capabilities` once before round 1 to confirm ids and option names. If a model is missing, drop that lane and say so; don't substitute. Use `opencode-go/`, not `opencode/` (Zen has run out of funds before).
 

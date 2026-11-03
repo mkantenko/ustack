@@ -5,7 +5,7 @@ description: Use when the user says council.
 
 # council
 
-Bring independent reviewers to the user's request, plan, or code change. Use all four models below unless the user explicitly changes the panel. Council is separate from `review-loop`; requesting one does not automatically run the other.
+Bring independent reviewers to the user's request, plan, or code change. Use all three models below unless the user explicitly changes the panel. Council is separate from `review-loop`; requesting one does not automatically run the other.
 
 ## Panel
 
@@ -13,7 +13,6 @@ Bring independent reviewers to the user's request, plan, or code change. Use all
 |---|---|
 | Opus | `{"providerInstanceId":"claudeAgent","model":"claude-opus-5-5","options":{"effort":"xhigh"}}` |
 | Sol | `{"providerInstanceId":"codex","model":"gpt-6.1-sol","options":{"reasoningEffort":"xhigh"}}` |
-| DeepSeek | `{"providerInstanceId":"opencode","model":"opencode-go/deepseek-v4.1-flash","options":{"variant":"max"}}` |
 | GLM | `{"providerInstanceId":"opencode","model":"opencode-go/glm-5.3-flash","options":{"variant":"max"}}` |
 
 Call `orchestrator_capabilities` before delegating to confirm model IDs and supported options. Report unavailable models; do not substitute Muse, Gemini, another model, or an OpenCode Zen route for the configured Go routes. Every selected reviewer is required. If any reviewer cannot run, report council as incomplete. Attempt every available lane even if another fails.
