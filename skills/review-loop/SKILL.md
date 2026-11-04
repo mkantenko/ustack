@@ -20,15 +20,15 @@ Call `orchestrator_capabilities` once before round 1 to confirm ids and option n
 ## Each round
 
 1. Commit and push the branch so the reviewers see a real head SHA. A PR doesn't need to exist yet.
-2. In one turn, start one `delegate_task` per lane with `role:"review"`, `mode:"async"`, `isolation:"worktree"`, `runtimeMode:"full-access"`, and a new `clientRequestId` (`<slug>-r<N>-<lane>`).
-3. End your turn. Don't poll, and read each result when its notification arrives.
+2. In one turn, start one `delegate_task` per lane with `role:"review"`, `mode:"async"`, `isolation:"shared"`, `runtimeMode:"full-access"`, and a new `clientRequestId` (`<slug>-r<N>-<lane>`). Reviewers use your checkout so they can run tests without reinstalling dependencies.
+3. End your turn. Don't poll, and read each result when its notification arrives. Leave the checkout alone until every lane has finished.
 4. Lanes are independent. A lane that ends without a findings list has failed (usage limit, insufficient funds, interrupted, provider blocked). It is not a clean review, and it does not stop the round. Retry an interrupted or blocked lane once. Leave a usage-limit or funds lane out for the rest of the session. The round is complete once every lane has reported or failed.
 5. Confirm your branch HEAD and `git status` are unchanged.
 
 ## Reviewer prompt
 
 Fill in these parts, in this order:
-1. Role and limits: independent reviewer, round N, REVIEW ONLY, no edits, commits, pushes, or GitHub posts, findings as the final answer.
+1. Role and limits: independent reviewer, round N, REVIEW ONLY, no edits, commits, pushes, or GitHub posts, findings as the final answer. It shares the author's checkout, so it may run tests and checks but must leave HEAD and the working tree as it found them.
 2. Target: repo, PR URL if one exists, branch, head SHA, `git fetch origin && git diff origin/main...<sha>`, and the newest commit to focus on.
 3. The original issue brief and the user's decisions, verbatim.
 4. Hard constraints from AGENTS.md/CLAUDE.md, marked "do not recommend violating".
