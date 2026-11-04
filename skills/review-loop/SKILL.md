@@ -5,18 +5,17 @@ description: Use when the user says review loop, or when u-stop or u-merge calls
 
 # Review Loop
 
-Each round, a panel of T3 delegate reviewers runs in parallel against the pushed head. You verify every finding yourself, then fix and repeat until a round comes back clean.
+Each round, a T3 delegate reviewer runs against the pushed head. You verify every finding yourself, then fix and repeat until a round comes back clean.
 
 ## Panel
 
-Do not use Opus in this workflow; it belongs to `council`. Use the other models the user names. Otherwise use both:
+Do not use Opus in this workflow; it belongs to `council`. Use the other models the user names. Otherwise use Sol only:
 
 | Lane | target |
 |---|---|
-| Codex | `{"providerInstanceId":"codex","model":"gpt-6.1-sol","options":{"reasoningEffort":"xhigh"}}` |
-| GLM | `{"providerInstanceId":"opencode","model":"opencode-go/glm-5.3-flash","options":{"variant":"max"}}` |
+| Sol | `{"providerInstanceId":"codex","model":"gpt-6.1-sol","options":{"reasoningEffort":"xhigh"}}` |
 
-Call `orchestrator_capabilities` once before round 1 to confirm ids and option names. If a model is missing, drop that lane and say so; don't substitute. Use `opencode-go/`, not `opencode/` (Zen has run out of funds before).
+Call `orchestrator_capabilities` once before round 1 to confirm ids and option names. If a model is missing, drop that lane and say so; don't substitute.
 
 ## Each round
 

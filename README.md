@@ -9,7 +9,7 @@ My agent skills for Claude Code and Codex. Shaped after [tstack](https://github.
 | `u-stop` | "U-stop" | Do the work, run `review-loop`, file the PR, stop. Never merges. |
 | `u-merge` | "U-merge" | Everything `u-stop` does, then merges once the merge gate passes. |
 | `council` | "council" | Opus, Sol, and GLM review independently in parallel; every opinion is required. |
-| `review-loop` | "review loop" | Codex and GLM review in parallel through T3 `delegate_task`, round after round until one comes back clean. |
+| `review-loop` | "review loop" | Sol reviews through T3 `delegate_task`, round after round until one comes back clean. |
 | `takeover` | "takeover" or "take over" | Continue inherited work, preserve contributor credit, and finish through the requested PR workflow. |
 | `outgoing-messages` | (automatic) | Signs and formats anything sent on my behalf, PR text included. |
 

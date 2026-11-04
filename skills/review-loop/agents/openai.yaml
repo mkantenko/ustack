@@ -1,4 +1,4 @@
 interface:
   display_name: "Review Loop"
-  short_description: "Parallel T3 delegate reviews until a round is clean"
+  short_description: "Sol T3 delegate reviews until a round is clean"
   default_prompt: "Use $review-loop to run independent reviews of this PR before finalizing it."
