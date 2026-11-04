@@ -12,7 +12,7 @@ Bring independent reviewers to the user's request, plan, or code change. Use all
 | Lane | Target |
 |---|---|
 | Opus | `{"providerInstanceId":"claudeAgent","model":"claude-opus-5-5","options":{"effort":"xhigh"}}` |
-| Sol | `{"providerInstanceId":"codex","model":"gpt-6.1-sol","options":{"reasoningEffort":"xhigh"}}` |
+| Sol | `{"providerInstanceId":"codex","model":"gpt-6.1-sol","options":{"reasoningEffort":"max","serviceTier":"default"}}` |
 | GLM | `{"providerInstanceId":"opencode","model":"opencode-go/glm-5.3-flash","options":{"variant":"max"}}` |
 
 Call `orchestrator_capabilities` before delegating to confirm model IDs and supported options. Report unavailable models; do not substitute Muse, Gemini, another model, or an OpenCode Zen route for the configured Go routes. Every selected reviewer is required. If any reviewer cannot run, report council as incomplete. Attempt every available lane even if another fails.

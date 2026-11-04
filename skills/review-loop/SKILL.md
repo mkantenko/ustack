@@ -13,7 +13,7 @@ Do not use Opus in this workflow; it belongs to `council`. Use the other models 
 
 | Lane | target |
 |---|---|
-| Sol | `{"providerInstanceId":"codex","model":"gpt-6.1-sol","options":{"reasoningEffort":"max"}}` |
+| Sol | `{"providerInstanceId":"codex","model":"gpt-6.1-sol","options":{"reasoningEffort":"max","serviceTier":"default"}}` |
 
 Call `orchestrator_capabilities` once before round 1 to confirm ids and option names. If a model is missing, drop that lane and say so; don't substitute.
 
