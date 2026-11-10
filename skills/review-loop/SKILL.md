@@ -20,7 +20,7 @@ Call `orchestrator_capabilities` once before round 1 to confirm ids and option n
 ## Each round
 
 1. Commit and push the branch so the reviewers see a real head SHA. A PR doesn't need to exist yet.
-2. In one turn, start one `delegate_task` per lane with `role:"review"`, `mode:"async"`, `isolation:"shared"`, `runtimeMode:"full-access"`, and a new `clientRequestId` (`<slug>-r<N>-<lane>`). Reviewers use your checkout so they can run tests without reinstalling dependencies.
+2. In one turn, start one `delegate_task` per lane with `role:"review"`, `mode:"async"`, `isolation:"shared"`, `runtimeMode:"auto"`, and a new `clientRequestId` (`<slug>-r<N>-<lane>`). Reviewers use your checkout so they can run tests without reinstalling dependencies.
 3. End your turn. Don't poll, and read each result when its notification arrives. Leave the checkout alone until every lane has finished.
 4. Lanes are independent. A lane that ends without a findings list has failed (usage limit, insufficient funds, interrupted, provider blocked). It is not a clean review, and it does not stop the round. Retry an interrupted or blocked lane once. Leave a usage-limit or funds lane out for the rest of the session. The round is complete once every lane has reported or failed.
 5. Confirm your branch HEAD and `git status` are unchanged.
