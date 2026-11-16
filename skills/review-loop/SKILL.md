@@ -27,17 +27,16 @@ Call `orchestrator_capabilities` once before round 1 to confirm ids and option n
 
 ## Reviewer prompt
 
-Fill in these parts, in this order:
+Each round is a fresh review: from round 2 on, send the same parts with the new SHA and nothing from earlier rounds. Fill in these parts, in this order:
 1. Role and limits: independent reviewer, round N, REVIEW ONLY, no edits, commits, pushes, or GitHub posts, findings as the final answer. It shares the author's checkout, so it may run tests and checks but must leave HEAD and the working tree as it found them.
 2. Target: repo, PR URL if one exists, branch, head SHA, `git fetch origin && git diff origin/main...<sha>`, and the newest commit to focus on.
 3. The original issue brief and the user's decisions, verbatim.
 4. Hard constraints from AGENTS.md/CLAUDE.md, marked "do not recommend violating".
-5. From round 2 on: each prior finding with its decision (accepted, fixed in `<sha>`, or rejected with the reason). Ask the reviewer to object to a rejection only with a concrete failure scenario.
-6. Output: for each finding, give severity, file:line, the defect in one sentence, a concrete failure scenario, and a fix. No style nits or speculation. Say explicitly if nothing material remains, and end with a numbered list (`R<N>-F1`...).
+5. Output: for each finding, give severity, file:line, the defect in one sentence, a concrete failure scenario, and a fix. No style nits or speculation. Say explicitly if nothing material remains, and end with a numbered list (`R<N>-F1`...).
 
 ## Judging findings
 
-Dedupe across lanes. Accept a finding only after you've read the code and confirmed or reproduced a concrete failure. Reject findings that are speculative, contradict the brief or repo rules, or add tests or comments. Also reject defects that predate the PR; send real ones to a follow-up thread. Record the reason for each decision. Fix accepted findings, run the repo checks, and push.
+Dedupe across lanes. Accept a finding only after you've read the code and confirmed or reproduced a concrete failure. Reject findings that are speculative, contradict the brief or repo rules, or add tests or comments. Also reject defects that predate the PR; send real ones to a follow-up thread. Record the reason for each decision. A re-raised rejected finding stays rejected without new evidence. Fix accepted findings, run the repo checks, and push.
 
 ## Stop or repeat
 

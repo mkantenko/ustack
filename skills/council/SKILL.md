@@ -29,9 +29,9 @@ Follow each delegate's returned `next` instructions and notifications. Do not po
 
 ## Judge and repeat
 
-Verify and deduplicate findings yourself. Accept concrete defects within the requested scope; reject unsupported claims and record why. Respect the user's test and code-comment constraints. Do not let repeated reviews expand the task. More votes do not make an unsupported claim correct, and agreement does not prove the absence of bugs.
+Verify and deduplicate findings yourself. A re-raised rejected finding stays rejected without new evidence. Accept concrete defects within the requested scope; reject unsupported claims and record why. Respect the user's test and code-comment constraints. Do not let repeated reviews expand the task. More votes do not make an unsupported claim correct, and agreement does not prove the absence of bugs.
 
-Fix accepted defects, run relevant checks, commit, and push when the requested workflow calls for a remote branch. Substantive fixes require a fresh council round on the new head, with prior findings and decisions supplied to every available reviewer. Each recheck uses new `delegate_task` calls. Leave the checkout alone while reviews run. Documentation or wording-only corrections do not require another round.
+Fix accepted defects, run relevant checks, commit, and push when the requested workflow calls for a remote branch. Substantive fixes require a fresh council round on the new head, with the same inputs as the first round and no prior findings or decisions. Each recheck uses new `delegate_task` calls. Leave the checkout alone while reviews run. Documentation or wording-only corrections do not require another round.
 
 Council is complete only when every selected reviewer has returned a substantive opinion. A failed or unavailable lane leaves council incomplete; never drop it from the completion gate or let the other reviewers stand in for it. Only the user can explicitly change the panel. For a code review to pass, every selected reviewer must have reviewed the final substantive diff, and no accepted finding from any reviewer may remain unresolved. Apply the same completion requirement to plans and decisions: every opinion is required even when reviewers disagree.
 
