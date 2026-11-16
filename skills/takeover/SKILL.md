@@ -17,6 +17,6 @@ Check the continuation against its intended base and current architecture. Rewor
 
 Independently verify the original failure and realistic workflows, following repository guidance and permissions. Respect the user's test and code-comment constraints. State what remains unverified.
 
-When the requested finish includes a PR, follow [u-stop](../u-stop/SKILL.md), including [review-loop](../review-loop/SKILL.md), to leave a reviewed PR open and unmerged. If the user authorizes merging, follow [u-merge](../u-merge/SKILL.md) instead. Takeover alone does not authorize merging or closing the original PR. Use [outgoing-messages](../outgoing-messages/SKILL.md) for PR text and any replies the user authorizes.
+When the requested finish includes a PR, follow [u-stop](../u-stop/SKILL.md), including [review-loop](../review-loop/SKILL.md), to leave a reviewed PR open and unmerged. If the user authorizes merging, follow [u-merge](../u-merge/SKILL.md) instead. Takeover alone does not authorize merging or closing the original PR.
 
 Report what you inherited, what you changed, how you verified it, how credit was preserved, and any remaining decision.

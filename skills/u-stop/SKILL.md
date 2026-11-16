@@ -17,7 +17,7 @@ Use evidence observed in this session: reproduce the failure and verify the fix,
 
 1. Run `review-loop` on the pushed head before filing the PR. A PR is reviewed only when the loop completes with at least one reporting lane and no accepted findings remaining. Failed lanes alone do not constitute approval.
 2. Fix accepted findings and verify each fix. Review must cover the final diff; substantive changes or conflict resolutions after review require another round.
-3. File the PR, or update the existing one. Use [outgoing-messages](../outgoing-messages/SKILL.md) for its text. Lead with the concrete problem and resulting behavior, include verification evidence and the review decisions, and disclose any remaining limitations. Link the PR to the T3 thread with `link_pull_request` immediately after creating or pushing it.
+3. File the PR, or update the existing one. Lead with the concrete problem and resulting behavior, include verification evidence and the review decisions, and disclose any remaining limitations. Link the PR to the T3 thread with `link_pull_request` immediately after creating or pushing it.
 4. Mark it ready only once it is actually reviewed. Confirm the live PR is open, its head matches the reviewed commit, and it is not a draft. Report checks and mergeability accurately; do not describe pending or failed checks as passing.
 
 ## Prevent accidental merging
