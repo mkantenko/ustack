@@ -26,12 +26,12 @@ Hi, I can meet at 2. See you then.
 Sent by Claude Opus 5.5 via Claude Code.
 ```
 
-Ukrainian sent-message example for GPT-6.1 Sol running via Codex:
+Ukrainian sent-message example for GPT-6.2 Sol running via Codex:
 
 ```text
 Привіт! Я можу зустрітися о 14:00. Тобі підходить цей час?
 
-Надіслав GPT-6.1 Sol через Codex.
+Надіслав GPT-6.2 Sol через Codex.
 ```
 
 ## Group chats
