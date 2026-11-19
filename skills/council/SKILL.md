@@ -13,12 +13,13 @@ Bring in a panel of models to review a user's descriptive request, plan or chang
 |---|---|
 | Opus | `{"providerInstanceId":"claudeAgent","model":"claude-opus-5-5","options":{"effort":"xhigh"}}` |
 | Sol | `{"providerInstanceId":"codex","model":"gpt-6.2-sol","options":{"reasoningEffort":"xhigh","serviceTier":"default"}}` |
+| Gemini | `{"providerInstanceId":"antigravity","model":"gemini-4-neon","options":{"thought_level":"xhigh"}}` |
 
 Call `orchestrator_capabilities` first to confirm model IDs and options. Report an unavailable model; never substitute another.
 
 ## Run
 
-Start one delegate subagent per model in parallel. For code reviews, run them in your checkout to allow for running tests easily. (`isolation:"shared"`)
+Start one delegate subagent per model in parallel with `runtimeMode:"full-access"`. `delegate_task` rejects a mode above your own session's, so if yours isn't full-access, report that instead of downgrading. For code reviews, run them in your checkout to allow for running tests easily. (`isolation:"shared"`)
 
 Pass every delegate the original request, user corrections, constraints, and relevant artifacts. For code, add the repo, base, exact head SHA, scoped diff, and verification results. Reviewers are review-only: no edits, commits, pushes, or PR posts, and they leave the working tree as found. Don't show reviewers each other's answers before their independent first pass.
 

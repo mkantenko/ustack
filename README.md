@@ -8,7 +8,7 @@ My essential skills for agentic work. Forked from [tstack](https://github.com/t3
 |---|---|---|
 | `u-stop` | "U-stop" | Do your task, run `review-loop`, file the PR, stop. |
 | `u-merge` | "U-merge" | Do your task, run `review-loop`, file the PR, merge. |
-| `council` | "council" | Opus, Sol, and [third model TBD] do reviews, every opinion is required. |
+| `council` | "council" | Opus, Sol, and Gemini do reviews, every opinion is required. |
 | `review-loop` | "review loop" | Sol reviews through T3 `delegate_task`, round after round until one comes back clean. |
 | `takeover` | "takeover" or "take over" | Continue inherited work, preserve contributor credit, and finish through the requested PR workflow. |
 | `outgoing-messages` | (automatic) | Signs and formats anything sent on user's behalf.|
