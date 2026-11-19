@@ -12,7 +12,7 @@ Bring in a panel of models to review a user's descriptive request, plan or chang
 | Lane | Target |
 |---|---|
 | Opus | `{"providerInstanceId":"claudeAgent","model":"claude-opus-5-5","options":{"effort":"xhigh"}}` |
-| Sol | `{"providerInstanceId":"codex","model":"gpt-6.2-sol","options":{"reasoningEffort":"max","serviceTier":"default"}}` |
+| Sol | `{"providerInstanceId":"codex","model":"gpt-6.2-sol","options":{"reasoningEffort":"xhigh","serviceTier":"default"}}` |
 
 Call `orchestrator_capabilities` first to confirm model IDs and options. Report an unavailable model; never substitute another.
 
