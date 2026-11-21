@@ -5,7 +5,7 @@ description: Must be used before drafting or sending any message, reply, or comm
 
 # Agent communication
 
-This applies to direct messages, email, comments, and other communications sent on the user's behalf. Know which model and agent you are before signing. The recipient should be able to tell who wrote the message, and the message should sound like a person rather than generated copy.
+This applies to direct messages, email, comments, and other communications sent on the user's behalf. Know which model you are before signing. The recipient should be able to tell who wrote the message, and the message should sound like a person rather than generated copy.
 
 Treat this as a pre-send requirement. Finish the exact message, including its signature, before calling a send or reply tool. Do not send first and add the signature or other required content in a second message. If a sent message needs a correction and the available tools cannot edit it, explain that to the user and wait for authorization before sending a follow-up correction.
 
@@ -18,27 +18,27 @@ Give the writer the user's request and wording, the recipient and channel, the r
 ## Format the message
 
 - Preserve the user's intent and tone. Keep the message concise and specific to the context.
-- Unless the user asks for different signature wording or asks for no signature, put an authorship line at the end, separated from the body by one blank line (two newline characters). Use this format, selecting the verb below and replacing the identity placeholders: `[Verb] by [model] via [agent].`
-- When the task is nothing but the message, credit only the writer, always as `Written by [model] via [agent].` whatever the delivery. When the message comes out of other work, such as a PR for code you changed, credit every model involved, the writer first, each with its own agent, joined by `and`: `[Verb] by [model] via [agent] and [model] via [agent].` Take a delegate's model and agent names from `orchestrator_capabilities`.
+- Unless the user asks for different signature wording or asks for no signature, put an authorship line at the end, separated from the body by one blank line (two newline characters). Use this format, selecting the verb below and replacing the model placeholder: `[Verb] by [model] via T3 Code.` Every message says it was sent from T3 Code, whatever agent or provider ran each model.
+- When the task is nothing but the message, credit only the writer, always as `Written by [model] via T3 Code.` whatever the delivery. When the message comes out of other work, such as a PR for code you changed, credit every model involved, the writer first, joined by `and`: `[Verb] by [model] and [model] via T3 Code.` Take a delegate's model name from `orchestrator_capabilities`.
 - Choose the signature verb automatically: `Created` for code proposals/PRs, `Posted` for posts/comments, `Sent` for email/messages, `Drafted` when the user will deliver it, otherwise `Written`. Use the intended delivery verb in approval drafts. User-specified wording takes precedence.
-- Before sending, determine your model identity and agent identity from the current runtime or system instructions. Never copy the example identities as if they were yours, guess, or substitute a harness or platform name for either identity.
-- If you cannot determine one of the identities, do not invent it. Use the identity you can establish and tell the user that the other identity was unavailable before sending, unless the user specifies different wording.
-- If the message is in another language, translate the signature naturally while keeping the model and agent identities clear.
+- Before sending, determine your model identity from the current runtime or system instructions. Never copy the example models as if they were yours, guess, or substitute a harness or platform name for a model.
+- If you cannot determine a model, do not invent it. Credit the models you can establish and tell the user which one was unavailable before sending, unless the user specifies different wording.
+- If the message is in another language, translate the signature naturally while keeping the model names and T3 Code clear.
 
-Example message whose task was only the reply, written by Gemini 4 Neon via Antigravity:
+Example message whose task was only the reply, written by Gemini 4 Neon:
 
 ```text
 Hi, I can meet at 2. See you then.
 
-Written by Gemini 4 Neon via Antigravity.
+Written by Gemini 4 Neon via T3 Code.
 ```
 
-Ukrainian PR description written by Gemini 4 Neon via Antigravity for code GPT-6.2 Sol changed via Codex:
+Ukrainian PR description written by Gemini 4 Neon for code GPT-6.2 Sol changed:
 
 ```text
 Виправляє подвійне надсилання форми під час повільного з'єднання.
 
-Створили Gemini 4 Neon через Antigravity і GPT-6.2 Sol через Codex.
+Створили Gemini 4 Neon і GPT-6.2 Sol через T3 Code.
 ```
 
 ## Group chats
