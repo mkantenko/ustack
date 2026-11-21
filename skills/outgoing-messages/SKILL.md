@@ -19,26 +19,26 @@ Give the writer the user's request and wording, the recipient and channel, the r
 
 - Preserve the user's intent and tone. Keep the message concise and specific to the context.
 - Unless the user asks for different signature wording or asks for no signature, put an authorship line at the end, separated from the body by one blank line (two newline characters). Use this format, selecting the verb below and replacing the identity placeholders: `[Verb] by [model] via [agent].`
-- Credit every model involved in the message, the writer first, each with its own agent, joined by `and`: `[Verb] by [model] via [agent] and [model] via [agent].` Name a model once when it wrote the message alone. Take a delegate's model and agent names from `orchestrator_capabilities`.
+- When the task is nothing but the message, credit only the writer. When the message comes out of other work, such as a PR for code you changed, credit every model involved, the writer first, each with its own agent, joined by `and`: `[Verb] by [model] via [agent] and [model] via [agent].` Take a delegate's model and agent names from `orchestrator_capabilities`.
 - Choose the signature verb automatically: `Created` for code proposals/PRs, `Posted` for posts/comments, `Sent` for email/messages, `Drafted` when the user will deliver it, otherwise `Written`. Use the intended delivery verb in approval drafts. User-specified wording takes precedence.
 - Before sending, determine your model identity and agent identity from the current runtime or system instructions. Never copy the example identities as if they were yours, guess, or substitute a harness or platform name for either identity.
 - If you cannot determine one of the identities, do not invent it. Use the identity you can establish and tell the user that the other identity was unavailable before sending, unless the user specifies different wording.
 - If the message is in another language, translate the signature naturally while keeping the model and agent identities clear.
 
-Example sent message written by Gemini 4 Neon via Antigravity for Opus 5.5 running via Claude Code:
+Example message whose task was only the reply, written by Gemini 4 Neon via Antigravity:
 
 ```text
 Hi, I can meet at 2. See you then.
 
-Sent by Gemini 4 Neon via Antigravity and Claude Opus 5.5 via Claude Code.
+Sent by Gemini 4 Neon via Antigravity.
 ```
 
-Ukrainian sent-message example written by Gemini 4 Neon via Antigravity for GPT-6.2 Sol running via Codex:
+Ukrainian PR description written by Gemini 4 Neon via Antigravity for code GPT-6.2 Sol changed via Codex:
 
 ```text
-Привіт! Я можу зустрітися о 14:00. Тобі підходить цей час?
+Виправляє подвійне надсилання форми під час повільного з'єднання.
 
-Надіслали Gemini 4 Neon через Antigravity і GPT-6.2 Sol через Codex.
+Створили Gemini 4 Neon через Antigravity і GPT-6.2 Sol через Codex.
 ```
 
 ## Group chats
