@@ -11,7 +11,7 @@ My essential skills for agentic work. Forked from [tstack](https://github.com/t3
 | `council` | "council" | Opus, Sol, and Gemini do reviews, every opinion is required. |
 | `review-loop` | "review loop" | Sol reviews through T3 `delegate_task`, round after round until one comes back clean. |
 | `takeover` | "takeover" or "take over" | Continue inherited work, preserve contributor credit, and finish through the requested PR workflow. |
-| `outgoing-messages` | (automatic) | Signs and formats anything sent on user's behalf.|
+| `outgoing-messages` | (automatic) | Gemini 4 Neon writes anything sent on user's behalf; every model involved signs it. |
 
 - `u-merge` uses `u-stop`.
 - `u-stop` uses `review-loop` and `outgoing-messages`.
