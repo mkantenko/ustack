@@ -5,7 +5,7 @@ description: Must be used before drafting or sending any message, reply, or comm
 
 # Agent communication
 
-This applies to direct messages, email, comments, and other communications sent on the user's behalf. Know which model you are before signing. The recipient should be able to tell who wrote the message, and the message should sound like a person rather than generated copy.
+This applies to direct messages, email, comments, and other communications sent on the user's behalf. Know which model you are before signing. The recipient should be able to tell who wrote the message, and the message should sound like a person rather than generated copy. If you are not running in T3 Code, warn the user before starting, skip Gemini 4 Neon, and sign with your actual agent name instead of T3 Code.
 
 Treat this as a pre-send requirement. Finish the exact message, including its signature, before calling a send or reply tool. Do not send first and add the signature or other required content in a second message. If a sent message needs a correction and the available tools cannot edit it, explain that to the user and wait for authorization before sending a follow-up correction.
 
@@ -33,6 +33,14 @@ Hi, I can meet at 2. See you then.
 Written by Gemini 4 Neon via T3 Code.
 ```
 
+Example message for a change Claude Opus 5.5 made and Gemini 4 Neon wrote about:
+
+```text
+This fixes a problem with the parser that failed the whole run if a batch prompt failed.
+
+Written by Gemini 4 Neon and Claude Opus 5.5 via T3 Code.
+```
+
 Ukrainian PR description written by Gemini 4 Neon for code GPT-6.2 Sol changed:
 
 ```text
@@ -43,9 +51,7 @@ Ukrainian PR description written by Gemini 4 Neon for code GPT-6.2 Sol changed:
 
 ## Group chats
 
-Do not send or reply in a group chat unless the user explicitly asks you to post in that group. A request to find, read, summarize, or draft a group message does not authorize posting it. A direct request to send a message to a named group does.
-
-If the destination is ambiguous, inspect the available conversation details and choose only when they identify the intended recipient or group clearly. Ask the user when multiple plausible destinations remain.
+Do not send or reply in a group chat unless the user explicitly asks you to post in that group. A request to find, read, summarize, or draft a group message does not authorize posting it.
 
 ## Follow the user's signature instructions
 
